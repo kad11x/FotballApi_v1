@@ -2,7 +2,7 @@
 {
     public interface IFotballApiClient
     {
-        Task<HttpResponseMessage> GetAllPlayers();
+        Task<HttpResponseMessage> GetStatus();
 
 
     }

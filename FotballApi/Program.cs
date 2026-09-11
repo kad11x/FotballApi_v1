@@ -1,3 +1,6 @@
+using FotballApi.Core.Repositoris.Interfaces;
+using FotballApi.Core.Repositoris;
+using FotballApi.Controllers;
 
 namespace FotballApi
 {
@@ -12,6 +15,18 @@ namespace FotballApi
             builder.Services.AddControllers();
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddOpenApi();
+
+            builder.Services.AddHttpClient<IFotballApiClient, FotballApiClient>(client =>
+            {
+                client.BaseAddress = new Uri("https://v3.football.api-sports.io");
+
+                client.DefaultRequestHeaders.Add(
+                    "x-apisports-key",
+                    "c9c6c94ef404653a5142cc08d959fa5c"
+                );
+            });
+
+
 
             var app = builder.Build();
 

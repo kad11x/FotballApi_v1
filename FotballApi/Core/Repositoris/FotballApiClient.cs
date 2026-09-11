@@ -11,9 +11,9 @@ namespace FotballApi.Core.Repositoris
             _httpClient = httpClient;
         }
 
-        public async Task<HttpResponseMessage> GetAllPlayers()
+        public async Task<HttpResponseMessage> GetStatus()
         {
-            return await _httpClient.GetAsync("webapiroutwthoutbase");
+            return await _httpClient.GetAsync("/status");
         }
     }
 }
