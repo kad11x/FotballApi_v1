@@ -33,7 +33,10 @@ namespace FotballApi.Controllers
             }
             StatusApiRespons? status = await respons.Content.ReadFromJsonAsync<StatusApiRespons>();
             
+            
             return Ok(status);
         }
+
+        
     }
 }

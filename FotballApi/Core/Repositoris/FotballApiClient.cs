@@ -15,5 +15,11 @@ namespace FotballApi.Core.Repositoris
         {
             return await _httpClient.GetAsync("/status");
         }
+
+
+        public async Task<HttpResponseMessage> GetTeam(int id)
+        {
+            return await _httpClient.GetAsync($"/teams/{id}");
+        }
     }
 }

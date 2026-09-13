@@ -1,4 +1,5 @@
-﻿namespace FotballApi.DataAcessesLayer
+﻿
+namespace FotballApi.DataAcessesLayer
 {
     public class DataContext
     {
