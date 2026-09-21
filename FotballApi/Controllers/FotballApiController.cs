@@ -37,6 +37,24 @@ namespace FotballApi.Controllers
             return Ok(status);
         }
 
+
+        [HttpGet("{date}")]
+
+        public async Task<IActionResult> GetMatches(string date) {
+
+            HttpResponseMessage respons = await _apiClient.GetMatchesByDate(date);
+
+            if (!respons.IsSuccessStatusCode) {
+
+                return NoContent();
+            }
+
+            var status = await respons.Content.ReadFromJsonAsAyncAsync<MAtchType>();
+
+
+            return Ok(status);
+
+
         
     }
 }

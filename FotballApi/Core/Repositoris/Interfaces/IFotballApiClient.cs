@@ -4,6 +4,8 @@
     {
         Task<HttpResponseMessage> GetStatus();
 
+        Task<HttpResponseMessage> GetMatchesByDate(string date);
+
 
     }
 }

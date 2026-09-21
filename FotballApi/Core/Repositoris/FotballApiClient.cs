@@ -21,5 +21,12 @@ namespace FotballApi.Core.Repositoris
         {
             return await _httpClient.GetAsync($"/teams/{id}");
         }
+
+
+        public async Task<HttpResponseMessage> GetMatchesByDate(string date)
+        {
+
+            return await _httpClient.GetAsync($"/fixtures/ {date}");
+        }
     }
 }
