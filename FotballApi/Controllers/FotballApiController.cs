@@ -1,5 +1,5 @@
 ﻿using FotballApi.Core.Repositoris.Interfaces;
-using FotballApi.Domain.Model.Status;
+using FotballApi.Domain.Model;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
@@ -40,21 +40,23 @@ namespace FotballApi.Controllers
 
         [HttpGet("{date}")]
 
-        public async Task<IActionResult> GetMatches(string date) {
+        public async Task<IActionResult> GetMatches(string date)
+        {
 
             HttpResponseMessage respons = await _apiClient.GetMatchesByDate(date);
 
-            if (!respons.IsSuccessStatusCode) {
+            if (!respons.IsSuccessStatusCode)
+            {
 
                 return NoContent();
             }
 
-            var status = await respons.Content.ReadFromJsonAsAyncAsync<MAtchType>();
+            var status = await respons.Content.ReadFromJsonAsync<ApiEndpointForFixture>();
 
 
             return Ok(status);
 
-
+        }
         
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace FotballApi.Domain.Model.Status
+﻿namespace FotballApi.Domain.Model
 {
     public class Requests
     {

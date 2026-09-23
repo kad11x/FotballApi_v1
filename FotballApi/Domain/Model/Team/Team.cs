@@ -1,4 +1,4 @@
-﻿namespace FotballApi.Domain.Model.Team
+﻿namespace FotballApi.Domain.Model
 {
     public class Team
     {
