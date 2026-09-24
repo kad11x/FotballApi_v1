@@ -44,6 +44,12 @@ export default function Header() {
               >
                 Leagues
               </NavLink>
+              <NavLink
+                to="/userpage"
+                className="block px-4 py-2 hover:bg-gray-100"
+              >
+                Account
+              </NavLink>
             </div>
           )}
         </div>

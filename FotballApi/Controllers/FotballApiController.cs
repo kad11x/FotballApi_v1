@@ -23,7 +23,6 @@ namespace FotballApi.Controllers
         }
 
         [HttpGet("status")]
-       
         public async Task<ActionResult<StatusApiRespons>> GetStatus()
         {
             HttpResponseMessage respons = await _apiClient.GetStatus();
@@ -39,7 +38,6 @@ namespace FotballApi.Controllers
 
 
         [HttpGet("{date}")]
-
         public async Task<IActionResult> GetMatches(string date)
         {
 

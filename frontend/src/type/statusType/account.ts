@@ -20,6 +20,6 @@ export interface StatusRequests {
 export interface StatusRespons {
     account: Account;
     subscription: Subscription;
-    requests: Request;
+    statusRequest: StatusRequests;
 
 }

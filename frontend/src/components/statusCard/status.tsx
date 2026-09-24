@@ -32,6 +32,12 @@ export function Status() {
           <p className="font-medium text-gray-900">
             {status?.subscription.active ? "Active" : "Inactive"}
           </p>
+
+          <p>
+            {" "}
+            The Limit is 100 and ure Count is:{" "}
+            {status?.statusRequest?.currant ?? 0}{" "}
+          </p>
         </div>
       </div>
     </div>
