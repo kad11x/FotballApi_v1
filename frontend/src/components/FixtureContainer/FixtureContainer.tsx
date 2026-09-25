@@ -7,7 +7,7 @@ import Header from "../statusCard/Header/Header";
 export default function FixtureContainer() {
   const [fixtures, setFixtures] = useState<ResponsFixture[] | undefined>([]);
 
-  const date = "2026-09-23";
+  const date = "2026-09-25";
 
   useEffect(() => {
     async function loadFixture(date: string) {
