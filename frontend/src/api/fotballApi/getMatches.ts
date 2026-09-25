@@ -4,7 +4,7 @@ import type { ResponsFixture } from "../../type/fixtures/fixtureType";
 export default async function GetMatches(date: string): Promise<ResponsFixture[]> {
 
     try {
-        const respons = await fetch(`https://my-football-api.azurewebsites.net/fotballApi/${date}`);
+        const respons = await fetch(`https://fortball-api.kindglacier-bd9579ed.norwayeast.azurecontainerapps.io/fotballApi/${date}`);
 
         if (!respons.ok) {
             throw new Error(`HTTP error: ${respons.status}`)

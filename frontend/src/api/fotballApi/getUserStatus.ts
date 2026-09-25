@@ -6,7 +6,7 @@ export async function getStatus() {
 
     try {
 
-        const respons = await fetch("https://my-football-api.azurewebsites.net/fotballapi/status");
+        const respons = await fetch("https://fortball-api.kindglacier-bd9579ed.norwayeast.azurecontainerapps.io/fotballapi/status");
 
         if (!respons.ok) {
             throw new Error(`http: ${respons.status}`)
