@@ -18,7 +18,7 @@ namespace FotballApi
                     policy =>
                     {
                         policy
-                            .WithOrigins("http://localhost:5173")
+                            .WithOrigins("*")
                             .AllowAnyHeader()
                             .AllowAnyMethod();
                     });
