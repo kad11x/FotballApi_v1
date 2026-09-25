@@ -55,7 +55,6 @@ jobs:
 
   backend:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
       
@@ -71,5 +70,5 @@ jobs:
         with:
           context: .
           file: ./FotballApi/Dockerfile
-          push: false
+          push: true
           tags: brights2026.azurecr.io/kad/fotballapi:latest
